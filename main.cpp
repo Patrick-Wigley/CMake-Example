@@ -1,13 +1,11 @@
 #include <iostream>
-#include "Dependencies\GLEW\Include\GL\glew.h"
-#include "Dependencies\GLFW\Include\GLFW\glfw3.h"
-#include "Dependencies\\GLM\\glm\\glm.hpp"
-#include "Dependencies\\GLM\\glm\\gtc\\type_ptr.hpp"
-
-
+#include <GL/gl.h>
 
 int main()
 {
-    printf("%s", "Hello World. I am adding a new change to code");
+    GLuint UnsignedintFromGL;
+    UnsignedintFromGL = 1;
+
+    printf("OpenGL Uint: %u", UnsignedintFromGL);
     return 0;
 }

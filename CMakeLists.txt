@@ -9,6 +9,7 @@ endif()
 
 include_directories(.)
 
+find_package(OpenGL REQUIRED)
+include_directories(${OPENGL_INCLUDE_DIRS})
 
 add_executable(${PROJECT_NAME} main.cpp)
-target_link_libraries(${PROJECT_NAME} ${OPENGL_LIBRARIES})
