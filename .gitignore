@@ -3,8 +3,3 @@
 
 #CMake
 build
-
-#python
-_pycache__
-pycache
-*.pytest_cache
