@@ -1,5 +1,11 @@
 cmake_minimum_required(VERSION 3.21.1)
-project(Practice)
+project(OpenglProject)
+
+set(PROJECT_DIR ${CMAKE_SOURCE_DIR})
+set(PROJECT_INCLUDE_DIR ${PROJECT_DIR}/include)
+set(PROJECT_SOURCE_DIR ${PROJECT_DIR}/src)
+set(PROJECT_SOURCES ${PROJECT_SOURCE_DIR}/main.cpp)
+
 
 # OPENGL Libs used currently are 32 Bit - (Make more dynamic in future)
 set(OSBitSize 32)
@@ -7,9 +13,7 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 8)
     set(OSBitSize 64)
 endif()
 
-include_directories(.)
+include_directories(${PROJECT_INCLUDE_DIR})
 
-find_package(OpenGL REQUIRED)
-include_directories(${OPENGL_INCLUDE_DIRS})
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
