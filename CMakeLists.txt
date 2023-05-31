@@ -13,7 +13,12 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 8)
     set(OSBitSize 64)
 endif()
 
+set(CMAKE_PREFIX_PATH PROJECT_INCLUDE_DIR/GLFW)
+find_package(glfw3 REQUIRED)
+
 include_directories(${PROJECT_INCLUDE_DIR})
 
 
 add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
+
+target_link_libraries((${PROJECT_NAME} glfw))
