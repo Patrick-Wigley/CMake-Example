@@ -1,2 +1,2 @@
 
-cmake -G Ninja ./build -o VERBOSE=1
+cmake -G Ninja ./build
