@@ -10,12 +10,17 @@ set(PROJECT_ENTRY ./main.cpp)
 
 add_executable(${PROJECT_NAME} ${PROJECT_ENTRY})
 
+set(CMAKE_PREFIX_PATH "C:/dev/vcpkg/installed/x86-windows/share")
+
+find_package(glfw3 CONFIG REQUIRED)
+target_link_libraries(main PRIVATE glfw)
 
 
-target_link_directories(${PROJECT_NAME}
-    PUBLIC src
-)
-target_link_libraries(${PROJECT_NAME} src)
+
+# target_link_directories(${PROJECT_NAME}
+#     PUBLIC src
+# )
+# target_link_libraries(${PROJECT_NAME} src)
 
 
 
