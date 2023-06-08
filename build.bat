@@ -1,2 +1,0 @@
-
-cmake -G Ninja ./build
