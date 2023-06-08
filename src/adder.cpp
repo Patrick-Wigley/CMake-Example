@@ -1,4 +1,4 @@
-#include "Adder.h"
+#include "adder.h"
 
 int CMakeExample::Add(int a, int b) {
     return a + b;

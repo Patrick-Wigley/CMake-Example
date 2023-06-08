@@ -1,13 +1,13 @@
 #include <iostream>
 // #include <GLFW/glfw3.h>
-#include "src/adder.h"
+#include <adder.h>
 
 using namespace std;
 
 
 int main(void)
 {
-    printf("1 + 3 = %f", CMakeExample::Add(1,3));
+    printf("1 + 3 = %f\n", CMakeExample::Add(1.0f,3.0f));
     return 0;
 
 
