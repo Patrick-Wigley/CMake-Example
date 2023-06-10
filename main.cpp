@@ -1,5 +1,5 @@
 #include <iostream>
-#include <glfw/glfw3.h>
+#include <GLFW/glfw3.h>
 #include <adder.h>
 
 using namespace std;
@@ -31,7 +31,7 @@ int main(void)
     while (!glfwWindowShouldClose(window))
     {
         /* Render here */
-        glClear(GL_COLOR_BUFFER_BIT);
+        // glClear(GL_COLOR_BUFFER_BIT);
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
