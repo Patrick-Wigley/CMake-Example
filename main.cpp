@@ -1,5 +1,5 @@
 #include <iostream>
-#include <GLFW/glfw3.h>
+#include <glfw/glfw3.h>
 #include <adder.h>
 
 using namespace std;
