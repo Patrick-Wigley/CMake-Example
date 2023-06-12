@@ -7,13 +7,13 @@ using namespace std;
 
 int main(void)
 {
-    printf("1 + 3 = %f\n", CMakeExample::Add(1.0f,3.0f));
     
 
     GLFWwindow* window;
 
     /* Initialize the library */
     if (!glfwInit())
+        printf("exitting");
         return -1;
 
     /* Create a windowed mode window and its OpenGL context */
@@ -21,6 +21,7 @@ int main(void)
     if (!window)
     {
         glfwTerminate();
+        printf("exitting - No Window");
         return -1;
     }
 
@@ -38,13 +39,18 @@ int main(void)
 
         /* Poll for and process events */
         glfwPollEvents();
+        int a;
+        std::cin;
+        printf("1 + 3 = %f\n", CMakeExample::Add(1.0f,3.0f));
     }
+    const char* err;
+    glfwGetError(&err);
+    std::cout << "errors:" << err;
+    std::cin;
 
     glfwTerminate();
-    return 0;
     
-    cin.get();
-
+    return 0;
 }
 
 
