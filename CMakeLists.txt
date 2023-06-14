@@ -10,19 +10,22 @@ set(CMAKE_BUILD_TYPE Debug)
 add_executable(${PROJECT_NAME} ${PROJECT_ENTRY})
 
 add_subdirectory(src)
+add_subdirectory(src/debuggerContent)
 add_subdirectory(external/glfw)
 #add_subdirectory(external/glew)
 
 target_include_directories(${PROJECT_NAME} 
     PUBLIC src
+    PUBLIC src/debuggerContent
     PUBLIC external/glfw/include
  #   PUBLIC external/glew/include
     )
 target_link_directories(${PROJECT_NAME} 
     PRIVATE src
+    PRIVATE src/debuggerContent
     PRIVATE external/glfw/src
  #   PRIVATE external/glew/src
     )
-target_link_libraries(${PROJECT_NAME} ProjectsMathLib glfw)
+target_link_libraries(${PROJECT_NAME} ProjectsMathLib ProjectsTerminalManagerLib glfw)
 #target_link_libraries(${PROJECT_NAME} ProjectsMathLib glfw glew)
 
