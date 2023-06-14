@@ -1,20 +1,24 @@
 #include <iostream>
+
+
 #include <GLFW/glfw3.h>
 #include <adder.h>
+#include <TerminalManager.h>
 
 using namespace std;
 
-
 int main(void)
 {
-    
+    DebugTerminalManager terminalManager;
+
     GLFWwindow* window;
     unsigned int test = 1;
     test++;
 
+
     /* Initialize the library */
     if (!glfwInit())
-        printf("exitting");
+        terminalManager.Write("exitting");
         return -1;
 
     /* Create a windowed mode window and its OpenGL context */
@@ -22,7 +26,7 @@ int main(void)
     if (!window)
     {
         glfwTerminate();
-        printf("exitting - No Window");
+        terminalManager.Write("exitting - No Winow");
         return -1;
     }
 
@@ -42,6 +46,7 @@ int main(void)
         glfwPollEvents();
         int a;
         std::cin;
+        
         printf("1 + 3 = %f\n", CMakeExample::Add(1.0f,3.0f));
     }
     const char* err;
