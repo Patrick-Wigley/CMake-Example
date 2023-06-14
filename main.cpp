@@ -8,8 +8,9 @@ using namespace std;
 int main(void)
 {
     
-
     GLFWwindow* window;
+    unsigned int test = 1;
+    test++;
 
     /* Initialize the library */
     if (!glfwInit())
