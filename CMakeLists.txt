@@ -6,6 +6,7 @@ set(PROJECT_SOURCE_DIR ${CMAKE_SOURCE_DIR}/src)
 set(PROJECT_ENTRY ./main.cpp)
 
 set(CMAKE_BUILD_TYPE Debug)
+file(MAKE_DIRECTORY debugLogs)
 
 add_executable(${PROJECT_NAME} ${PROJECT_ENTRY})
 
