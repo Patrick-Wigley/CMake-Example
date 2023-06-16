@@ -1,6 +1,6 @@
 #include <iostream>
 
-
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <adder.h>
 #include <TerminalManager.h>
@@ -15,7 +15,7 @@ int main(void)
     unsigned int test = 1;
     test++;
 
-
+    
     /* Initialize the library */
     if (!glfwInit())
         terminalManager.Write("exitting");
