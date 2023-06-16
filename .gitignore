@@ -1,9 +1,5 @@
-
 #CMake
 build
-
-./include/
-
 
 #TerminalManager
 debugLogs
