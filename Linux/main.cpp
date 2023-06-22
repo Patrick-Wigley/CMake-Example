@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bitset>
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -15,12 +16,17 @@ int main(void)
     unsigned int test = 1;
     test++;
 
-    
     /* Initialize the library */
+    const char** err;
+    
     if (!glfwInit())
+    {
+        glfwGetError(err);
+        const char* error_msg = **(&err);
         terminalManager.Write("exitting");
+        terminalManager.Write(error_msg);
         return -1;
-
+    }
     /* Create a windowed mode window and its OpenGL context */
     window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
     if (!window)
@@ -49,11 +55,7 @@ int main(void)
         
         printf("1 + 3 = %f\n", CMakeExample::Add(1.0f,3.0f));
     }
-    const char* err;
-    glfwGetError(&err);
-    std::cout << "errors:" << err;
-    std::cin;
-
+    
     glfwTerminate();
     
     return 0;
